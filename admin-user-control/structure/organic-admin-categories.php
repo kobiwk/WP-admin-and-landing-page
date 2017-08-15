@@ -39,11 +39,11 @@ function organic_choose_category()
 		
 	}
 	
-
-	if (count(get_option('cat_for_display')) === 3)
+	$cat_option = get_option('cat_for_display');
+	if (count($cat_option) === 3)
 	{
 		echo "<ul>Uspesno ste odabrali sledece kategorije: ";
-		foreach( get_option('cat_for_display') as $option)
+		foreach($cat_option as $option)
 		{
 			echo "<li>" . $option . "</li>";
 		}
