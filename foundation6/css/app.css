@@ -1,0 +1,558 @@
+body {
+	font-family: Raleway;
+}
+
+/*HEADER*/
+.header-background{
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.header-background .menu {
+	position: absolute;
+	top: 30px;
+	font-weight: 600;
+}
+
+.header-background ul{
+	background-color: transparent;
+
+}
+
+.header-background ul a {
+	color: #677c85;
+	text-transform: uppercase;
+	font-weight: 600;
+
+}
+
+.header-background .background-image {
+	width: inherit;
+
+}
+.header-background .first-menu {
+	padding-top: 0;
+} 
+
+.first-menu {
+	margin-left: 100px;
+	height: 50px;
+}
+.first-menu a {
+	margin: 0 auto;
+	padding-top:0;
+	padding-bottom:0;
+	line-height: 50px;
+	font-size: 15px;
+}
+
+.second-menu {
+	right: 100px;
+	line-height: 50px;
+}
+
+
+
+.site-branding .site-title a{
+	position: absolute;
+
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	font-family: Raleway;
+	font-size: 140px;
+	font-weight: 200;
+	text-transform: uppercase;
+	color: #222020;
+}
+
+.site-branding .site-description {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	font-family: Raleway;
+	font-size: 32px;
+	font-weight: 900;
+}
+
+.site-branding .button {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	color: #222020;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: 2px solid #222020;
+}
+
+.header-background .black-arrow {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 8%;
+}
+
+/*SECOND PART*/
+
+.all-you-need-container {
+	height: 688px;
+}
+.all-you-need {
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 900;
+	margin-top: 15%;
+	
+}
+
+.all-you-need-boxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 8%;
+}
+
+figure {
+	
+	margin-left: 50px;
+}
+
+.box {
+	width: 315px;
+	height: 315px;
+	background-color: #71858d;
+	position: relative;
+
+}
+
+.box span {
+	font-size: 165.12px;
+	color: #ffffff;
+	font-weight: 200;
+	position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
+  	width: 100%;
+  	text-align: center;
+}
+
+.all-you-need-boxes figcaption {
+	width: 100%;
+  	text-align: center;
+  	margin-top: 20px;
+  	text-transform: uppercase;
+  	font-weight: 900;
+}
+
+
+
+
+/*ORGANIC INFO*/
+
+.organic-info {
+	height: 910px;
+	display:flex;
+	flex-direction: row;
+}
+
+.organic-info img {
+	width: 45%;
+}
+
+.info-text {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+  	justify-content: center;
+	text-align: left;
+	width: 50%;
+	margin-left: 20px;
+
+}
+
+.info-text h2 {
+	font-family: Raleway;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+.info-text p {
+	font-family: Raleway;
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+
+/*SEASONAL FRUITS*/
+
+.seasonal-fruits {
+	position: relative;
+}
+
+.seasonal-fruits img{
+	width: 100%;
+}
+
+.seasonal-fruits-text {
+
+	position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
+  	width: 100%;
+	text-align: center;
+}
+
+.seasonal-fruits-text h2 {
+	font-family: Raleway;
+	font-size: 50px;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+.seasonal-fruits-text p {
+	font-family: Raleway;
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.seasonal-fruits-text button {
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: #222020;
+	border: 2px solid #222020;
+}
+
+/*TESTIMONIALS*/
+.testimonials {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  	justify-content: center;
+
+}
+
+.testimonials img {
+	width: 45%;
+	height: 573px;
+}
+.testimonials-text {
+	margin-left: 20px;
+	font-family: Raleway;
+	font-size: 30px;
+	font-weight: 300;
+	margin-right: 100px;
+
+}
+
+
+
+.testimonials-text p:last-child {
+	font-size: 15px;
+	font-weight: 600;
+	margin-top:65px;
+}
+
+/*READ BLOG*/
+
+.read-blog {
+	position: relative;
+	background-color: #f3f3f2;
+	height: 620px;
+	
+}
+
+.read-blog h2 {
+	width: 100%;
+	height: 260px;
+	padding-top: 75px;
+	font-family: Raleway;
+	font-size: 50px;
+	font-weight: 200;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.read-blog-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+
+.blog-tx {
+
+	width: 300px;
+	margin-left: 75px;
+}
+
+.blog-tx .organic-blog-title a{
+	text-transform: uppercase;
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 900;
+	color: #696964;
+}
+
+.blog-tx button {
+	background-color: transparent;
+	border: 1px solid #222020;
+	color: #222020;
+	text-transform: uppercase;
+
+}
+
+.blog-tx .organic-button {
+	position: absolute;
+	bottom: 10%;
+} 
+.blog-tx .organic-blog-text {
+	margin-top: 10px;
+}
+
+.organic-blog-category {
+	text-transform: uppercase;
+}
+
+/*ABOVE FOOTER*/
+.above-footer img{
+	width: 100%;
+	height: 423px;
+}
+
+/*FOOTER*/
+.site-footer {
+
+}
+
+.footer-foundation {
+  display: inline-block;
+  width: 100%;
+  height: 489px;
+  color: #f3f3f2;
+  background-color: #677c85;
+}
+
+
+
+
+.first-footer-column {
+	width: 100%;
+	height: 210px;
+	line-height:210px;
+	text-align: center;
+}
+
+.second-footer-column {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+
+
+.footer-column {
+	display: inline-block;
+	float: left;
+	width:20%;
+	margin-right: 6.6%;
+	padding-top: 0;
+	font-size: 15px;	
+	font-weight: 300;
+}
+
+.footer-column:first-child {
+	margin-left: ;
+}
+
+.footer-column:last-child {
+	margin-right: 0;
+}
+
+
+.footer-column .footer-title {
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 900;
+
+}
+
+.footer-column input {
+	font-size: 15px;
+	font-weight: 100;
+	margin-top: 10px;
+	padding-bottom: 0px;
+	height: 20px;
+	background-color: transparent;
+	color: #f3f3f2;
+	border:none;
+	border-bottom: 1px solid #f3f3f2;
+	box-shadow: none;
+}
+
+.footer-column button {
+	background-color: transparent;
+	color: #f3f3f2;
+	border: 1px solid #f3f3f2;
+	text-transform: uppercase;
+	padding: 10px 30px;
+}
+
+/*Slider
+
+Rest of slider's css code is in slick-theme.css file*/
+
+.slider-bckg {
+	position: relative;
+	height: 788px;
+	background-color: #f3f3f2;
+}
+
+.slider-bckg h2 {
+	font-family: Raleway;
+	font-size: 50px;
+	font-weight: 200;
+	width: 100%;
+	height: 226px;
+	line-height: 276px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.slider-container {
+	position: relative;
+	display: block;
+
+}
+
+.slider {
+    width: 100%;
+    height: 50%;
+    background-color: #f3f3f2;
+    }
+
+.slick-slide {
+  margin: 0px 20px;
+  width: 370px;
+}
+
+.slick-slide img {
+  	width: 320px;
+}
+
+.slick-slide-image {
+	position: relative;
+   }
+
+ .slick-slide-image img {
+ 	padding-top: 50px;
+
+ } 
+
+
+.slider-container .shadow-left {
+	position: absolute;
+
+	width: 7%;
+	height: 320px;
+	-webkit-box-shadow: inset 59px 2px 46px -19px rgba(255,255,255,0.83);
+	-moz-box-shadow: inset 59px 2px 46px -19px rgba(255,255,255,0.83);
+	box-shadow: inset 59px 2px 46px -19px rgba(255,255,255,0.83);
+	top: 50px;
+	left: 24px;
+	z-index: 0;
+}
+
+.slider-container .shadow-right {
+	position: absolute;
+	width: 6%;
+	height: 320px;
+	-webkit-box-shadow: inset -59px -2px 64px -33px rgba(255,255,255,1);
+	-moz-box-shadow: inset -59px -2px 64px -33px rgba(255,255,255,1);
+	box-shadow: inset -59px -2px 64px -33px rgba(255,255,255,1);
+	top: 50px;
+	right: 72px;
+}
+
+
+.slick-slide-image .fruit {
+		width: 100%;
+		font-size: 26.74px;
+		font-weight: 200;
+		text-align: center;
+		padding-right: 50px; /*because of padding in main div*/
+		margin-bottom: -10px;
+}
+
+.slick-slide-image .price {
+		width: 100%;
+		font-size: 26.74px;
+		font-weight: 600;
+		text-align: center;
+		padding-right: 50px; /*because of padding in main div*/
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.actions-slider {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 25px;
+	padding-right: 50px;
+}
+
+.actions-slider a {
+	display: inline-block;
+	width: 50px;
+}
+
+.actions-slider a:first-child {
+	margin-right: 20px;
+}
+
+.organic-best-price {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 9999;
+}
+
+.organic-best-price img {
+	width: 115px;
+}
+
+.best-price-background {
+	position: absolute;
+	top: -30px;
+	right: 15px;
+
+}
+
+
+.title-best-price {
+	position: absolute;
+	top: 50px;
+	right: 32px;
+	font-size: 26.74px;
+	font-weight: 600;
+	
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 27px;
+}
+
+/*HELPERS*/
