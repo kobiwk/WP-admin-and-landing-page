@@ -51,7 +51,7 @@ $options_header_logo = get_option('display_header_logo');
 
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
+				//the_custom_logo();
 
 				if ( is_front_page() || is_home() ) : //changed && to ||?> 
 					<h1 class="site-title">
