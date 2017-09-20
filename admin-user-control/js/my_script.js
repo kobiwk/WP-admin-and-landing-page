@@ -1,5 +1,6 @@
 
 
+
  function renderMediaUploaderHeaderLogo($)
  {
   'use strict';
@@ -164,12 +165,6 @@ function renderFeaturedHeaderLogo( $ ) {
       });
   });
  })( jQuery );
-
-
-
-
-
-
 
 
  function renderMediaUploader($)

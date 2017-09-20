@@ -2,6 +2,7 @@
 
 /*tutorial from: https://code.tutsplus.com/articles/how-to-integrate-the-wordpress-media-uploader-in-theme-and-plugin-options--wp-26052*/
 
+
 require_once('structure/organic-admin-basic.php');
 
 require_once('structure/organic-admin-header.php');
@@ -37,6 +38,7 @@ function load_foundation_style()
 
 function enqueue_foundation_js()
 {
+
   wp_enqueue_media(); // allow using of wp media uploader
   wp_enqueue_script( 'admin_foundation', get_template_directory_uri() . '/foundation6/js/vendor/foundation.js', array( 'jquery' ), '1', true );
   wp_enqueue_script('admin_foundation_init', get_template_directory_uri().'/foundation6/js/app.js', array('jquery'), '1', true );
@@ -61,6 +63,7 @@ function organic_theme_page()
     <div class="section panel">
       <h1>Organic Theme Options</h1>
       <ul class="tabs" data-tabs id="example-tabs">
+
         <li class="tabs-title is-active"><a href="#panel" aria-selected="true">Basic options</a></li>
         <li class="tabs-title"><a href="#panel1">Header</a></li>
         <li class="tabs-title"><a href="#panel2">Categories</a></li>
@@ -74,6 +77,7 @@ function organic_theme_page()
       </ul>
 
       <?php settings_errors('wptuts-settings-errors'); ?>
+
       <?php 
         $args = array(
                     'type'      => 'text',
@@ -117,6 +121,7 @@ function organic_theme_page()
                 </p>
               
             </div>
+
           
               <div class="tabs-panel" id="panel2">
                 <h2> Categories </h2>
@@ -175,6 +180,7 @@ function organic_theme_page()
                   </p>            
                    <?php save_organic_section_six_image(); ?>
               </div>
+
               <?php
 /**
  * Reading settings administration panel.
@@ -250,7 +256,8 @@ function pu_validate_settings($input)
     $newinput[$k] = trim($v);
     
     // Check the input is a letter or a number
-    if(!preg_match('/^[A-Z0-9, _]*$/i', $v)) {
+
+    if(!preg_match('/^[A-Z0-9 _]*$/i', $v)) {
       $newinput[$k] = '';
     }
   }

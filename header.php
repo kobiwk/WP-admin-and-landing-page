@@ -14,6 +14,7 @@ $options_butt_label = get_option('organic_header_button_label');
 $options_header_butt_link = get_option('organic_header_button_link');
 $options_bckg_image = get_option('background-thumbnail-src');
 $options_header_logo = get_option('display_header_logo');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -51,10 +52,12 @@ $options_header_logo = get_option('display_header_logo');
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
+
 				if ( is_front_page() || is_home() ) : //changed && to ||?> 
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" rel="home"><?php echo $options['pu_textbox']; ?></a></h1>
 				<?php else : ?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $options['pu_textbox']; ?></a></p>
+
 				<?php
 				endif;
 

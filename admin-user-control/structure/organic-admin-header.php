@@ -69,6 +69,7 @@ function organic_display_header_title($args)
               $options[$id] = stripslashes($options[$id]);  
               $options[$id] = esc_attr( $options[$id]);  
               echo "<input class='regular-text$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' />";  
+              echo "<input class='regular-text$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' />";  
               echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : "";  
           break;  
     }
@@ -76,10 +77,19 @@ function organic_display_header_title($args)
 
 function organic_display_header_description($args) 
 {
+
 	  extract( $args );
 
     $option_name = 'organic_header_description';
 	  $options = get_option( $option_name );
+
+	extract( $args );
+
+    $option_name = 'organic_header_description';
+
+    
+	$options = get_option( $option_name );
+
 
     switch ( $type ) {  
           case 'text':  
@@ -199,8 +209,9 @@ function save_header_background()
 }
 
 
-add_action('admin_init', 'save_header_background' );
-
 function wptuts_options_validate() {
   
 }
+
+add_action('admin_init', 'save_header_background' );
+

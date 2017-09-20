@@ -238,7 +238,7 @@ figure {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-
+  	justify-content: center;
 }
 
 .testimonials img {
@@ -459,10 +459,17 @@ Rest of slider's css code is in slick-theme.css file*/
 
  } 
 
+
 /* LEFT AND RIGHT SHADOW OVER SLIDER, FINISH LATER
 
 .slider-container .shadow-left {
 	position: absolute;
+
+
+.slider-container .shadow-left {
+	position: absolute;
+
+>>>>>>> 703861a7c8c26bf203713284335cef91fe7428e9
 	width: 7%;
 	height: 320px;
 	-webkit-box-shadow: inset 59px 2px 46px -19px rgba(255,255,255,0.83);
@@ -483,7 +490,9 @@ Rest of slider's css code is in slick-theme.css file*/
 	top: 50px;
 	right: 72px;
 }
+
 */
+
 
 
 .slick-slide-image .fruit {

@@ -30,6 +30,7 @@ get_header(); ?>
 			//need first letter of category name and category name
 
 			$options_for_cat_display = get_option('cat_for_display');
+
 			if ($options_for_cat_display)
 			{
 				foreach ($options_for_cat_display as $option)
@@ -53,6 +54,25 @@ get_header(); ?>
 			else
 			{
 				echo "Import your data here!";
+
+			
+			foreach ($options_for_cat_display as $option)
+			{
+				if (count($options_for_cat_display ) === 3)
+				{
+				?>
+				<figure>
+					<div class="box">
+						<span><?php echo strtoupper(substr($option,0,1) );?></span>
+					</div>
+					<figcaption> <?php echo $option; ?> </figcaption>
+				</figure>
+				<?php
+				}
+				else{
+					echo "Nise uneli tri kategorije";
+				}
+
 			}
 			?>
 

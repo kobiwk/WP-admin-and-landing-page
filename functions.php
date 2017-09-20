@@ -223,7 +223,6 @@ require('admin-user-control/admin-for-landing-page.php');
 function enqueue_styles()
 {
 	wp_enqueue_style( 'check161', get_stylesheet_directory_uri() . '/admin-user-control/css/admin.css' );
-  	  
 }
 
 
