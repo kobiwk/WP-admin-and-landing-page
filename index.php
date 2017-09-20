@@ -53,27 +53,11 @@ get_header(); ?>
 			}
 			else
 			{
-				echo "Import your data here!";
-
-			
-			foreach ($options_for_cat_display as $option)
-			{
-				if (count($options_for_cat_display ) === 3)
-				{
-				?>
-				<figure>
-					<div class="box">
-						<span><?php echo strtoupper(substr($option,0,1) );?></span>
-					</div>
-					<figcaption> <?php echo $option; ?> </figcaption>
-				</figure>
-				<?php
-				}
-				else{
-					echo "Nise uneli tri kategorije";
-				}
+				echo "Import your data here! Through admin page make categories you need and than choose main three of them, with the help 
+				of Organic admin page. ";
 
 			}
+			
 			?>
 
 			
@@ -119,6 +103,41 @@ get_header(); ?>
 				          <?php
 			    			
 			    		  endwhile;
+			    		else :
+			    		  //echo "<span class='slider-center-text'>Make posts and add 'featured-posts' tag to them, 
+			    			//if you want to display them in slider!' </span>";
+			    	      ?>
+
+				    	      <div class="slick-slide-image">
+				    	     
+				    	      	<img src = "<?php bloginfo('template_directory'); ?>/img/grapes.png" />
+				    	      	    <p class="fruit">Grapes</p>
+				    	      	    <p class="price">$39.95</p>
+				    	      </div>
+				    	      <div class="slick-slide-image">
+				    	      	<img src = "<?php bloginfo('template_directory'); ?>/img/plums.png" />
+				    	      	<p class="fruit">Plums</p>
+				    	      	<p class="price">$39.95</p>
+				    	      </div>
+				    	      <div class="slick-slide-image">
+				    	      	<img src = "<?php bloginfo('template_directory'); ?>/img/peaches.png" />
+				    	      	<p class="fruit">Peaches</p>
+				    	      	<p class="price">$39.95</p>
+				    	      </div>
+				    	      <div class="slick-slide-image">
+				    	      	  <img src = "<?php bloginfo('template_directory'); ?>/img/peaches.png" />
+					    	      <div class="organic-best-price">
+	         		   	      			<div class="whole-best-price-tag">
+		         		   	      			<img class="best-price-background" src="<?php echo get_template_directory_uri(); ?>/img/best-price.png">
+		         		   	      			<span class="title-best-price">Best<br>price</span>
+	         		   	      			</div>
+	         		   	      		</div>
+	         		   	      	  <p class="fruit">Peaches</p>
+				    	      	  <p class="price">$29.95</p>
+	         		   	      </div>
+
+        
+	         		   	<?php
 			    	    endif;
 			        ?>
 						
@@ -134,32 +153,107 @@ get_header(); ?>
 			</div>
 				  
 
-			
-	
 			<div class="organic-info">
 				<img src="<?php echo get_option('section-three-thumbnail-src');?>">
 				<div class="info-text">
 					<div>
-					<?php echo get_option('info-text') ?>
+					<?php
+					if (get_option('info-text'))
+					{
+						echo get_option('info-text'); 
+					}
+					else 
+					{
+						?>
+						<h2> 100% organic</h2>
+
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum punk.
+						Fresh locally grown </p>
+
+						<h2> Fresh locally grown </h2>
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum.
+						Free delivery</p>
+
+						<h2> Free delivery </h2>
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum.</p>
+
+						<?php
+					}
+					
+					?>
 					</div>
 				</div>
 			</div>
 
 			<div class="seasonal-fruits">
-				<img src="<?php echo get_option('section-four-thumbnail-src');?>"
+				<?php
+				if (get_option('section-four-thumbnail-src') )
+				{
+					?>
+					<img src="<?php echo get_option('section-four-thumbnail-src');?>"
 				alt="<?php echo get_option('section-four-thumbnail-alt');?>"
 				title="<?php echo get_option('section-four-thumbnail-title');?>">
+					<?php
+
+				}
+				else 
+				{
+					?>
+					<img src = "<?php bloginfo('template_directory'); ?>/img/seasonal-fruits.png">
+					<?php
+				}
+
+				?>
 				<div class="seasonal-fruits-text">
-					<h2><?php echo get_option('organic_section_four_options')['pu_textbox']; ?></h2>
-					<p><?php echo get_option('organic_section_four_description')['pu_textbox']; ?></p>
-					<button class="button" ><?php echo get_option('organic_section_four_button_label')['pu_textbox']; ?></button>
+					<?php
+						if (get_option('organic_section_four_options'))
+						{
+							?>
+							<h2><?php echo get_option('organic_section_four_options')['pu_textbox']; ?></h2>
+							<?php
+
+							if (get_option('organic_section_four_description'))
+							{
+								?>
+								<p><?php echo get_option('organic_section_four_description')['pu_textbox']; ?></p>
+								<?php
+							}
+							if (get_option('organic_section_four_button_label'))
+							{
+								?>
+								<button class="button" ><?php echo get_option('organic_section_four_button_label')['pu_textbox']; ?></button>
+								<?php
+							}
+						}
+						else 
+						{
+							?>
+							<h2>Seasonal fruits from you region</h2>
+							<p>Find fresh organic fruits <br>grown in your region by a local farm</p>		
+							<button class="button" >Search your region</button>
+							<?php
+						}
+						?>
 				</div>
 			</div>
 
 			<div class="testimonials">
 				<img src="<?php echo get_option('section-five-thumbnail-src'); ?>">
 				<div class="testimonials-text">
-					<?php echo get_option('info-text-five'); ?>
+					<?php 
+					if (get_option('info-text-five'))
+					{
+						echo get_option('info-text-five'); 
+					}
+					else
+					{
+						?>
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+						<p>Marko Kraljević GURMAN</p>
+						<?php
+					}
+					?>
+
 				</div>
 			</div>
 
@@ -223,17 +317,21 @@ get_header(); ?>
 			</div>
 
 			<div class="above-footer">
-				<img src="<?php 
-					if ('' != (get_option('section-six-thumbnail-src')))
-					{
-						echo get_option('section-six-thumbnail-src'); 
-					}
-					else
-					{
-						echo 'http://www.cvltnation.com/wp-content/uploads/2014/02/Bad-Brains-1979.jpg';
-					}
+				<?php
+				if (get_option('section-six-thumbnail-src'))
+				{
 					?>
-					">
+					<img src="<?php echo get_option('section-six-thumbnail-src');?>">
+					<?php
+				}
+				else
+				{
+					?>
+					<img src="<?php bloginfo('template_directory'); ?>/img/above-footer.png">			
+					<?php
+				}
+				?>
+				
 			</div>
 
 

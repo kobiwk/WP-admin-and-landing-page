@@ -36,7 +36,7 @@ $options_header_logo = get_option('display_header_logo');
 
 		<div class="header-background">
 			<ul class="menu first-menu">
-				<li><a href="#"><img src="<?php echo $options_header_logo; ?>"></a></li>
+				<li><a href="#"><img src="<?php if ($options_header_logo) echo $options_header_logo; ?>"></a></li>
 				<li><a href="#">Shop</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Blog</a></li>
@@ -54,7 +54,18 @@ $options_header_logo = get_option('display_header_logo');
 				the_custom_logo();
 
 				if ( is_front_page() || is_home() ) : //changed && to ||?> 
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" rel="home"><?php echo $options['pu_textbox']; ?></a></h1>
+					<h1 class="site-title">
+						<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
+						<?php if ($options['pu_textbox'])
+							  { 
+							  	  echo $options['pu_textbox']; 
+							  }
+							  else {
+							  	echo "Organic";
+							  }
+							  ?>
+						</a>
+					</h1>
 				<?php else : ?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $options['pu_textbox']; ?></a></p>
 
@@ -63,7 +74,18 @@ $options_header_logo = get_option('display_header_logo');
 
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $options_desc['pu_textbox']; /* WPCS: xss ok. */ ?></p>
+					<p class="site-description">
+						<?php 
+						if ($options_desc['pu_textbox'])
+						{
+							echo $options_desc['pu_textbox']; /* WPCS: xss ok. */ 
+						}	
+						else
+						{
+							echo "Organic meat, vegetables and fruits";
+						}
+						?>
+					</p>
 				<?php
 				endif; ?>
 				<button class="hollow button" href="<?php echo $options_header_butt_link['pu_textbox']; ?>">
@@ -73,13 +95,26 @@ $options_header_logo = get_option('display_header_logo');
 					}
 					else 
 					{
-						echo "Example";
+						echo "Shop now";
 					}
 				 ?></button>
 				
 			</div><!-- .site-branding -->
 			<img class="black-arrow" src="<?php echo get_template_directory_uri(); ?>/img/crna-strelica-dole.png" />
-			<img class="background-image" src="<?php echo $options_bckg_image;?>" />
+			 	<?php
+				if ($options_bckg_image) 
+				{
+					?>
+					<img class="background-image" src="<?php echo $options_bckg_image;?>" />
+					<?php
+				}
+				else
+				{
+					?>
+					<img class="background-image" src="<?php bloginfo('template_directory');?>/img/header-background.png" />
+					<?php
+				}
+				?>
 
 		</div> <!-- header background-->
 	
