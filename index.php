@@ -154,7 +154,21 @@ get_header(); ?>
 				  
 
 			<div class="organic-info">
-				<img src="<?php echo get_option('section-three-thumbnail-src');?>">
+			<?php
+				if (get_option('section-three-thumbnail-src'))
+				{
+					?>
+					<img src="<?php echo get_option('section-three-thumbnail-src');?>">
+					<?php
+				}
+				else
+				{
+					?>	
+					<img src="<?php bloginfo('template_directory'); ?>/img/info-image">
+					<?php
+				}
+			?>
+				
 				<div class="info-text">
 					<div>
 					<?php
@@ -238,7 +252,21 @@ get_header(); ?>
 			</div>
 
 			<div class="testimonials">
-				<img src="<?php echo get_option('section-five-thumbnail-src'); ?>">
+				<?php
+				if (get_option('section-five-thumbnail-src'))
+				{
+					?>
+					<img src="<?php echo get_option('section-five-thumbnail-src'); ?>">
+					<?	
+				}
+				else
+				{
+					?>
+					<img src="<?php bloginfo('template_directory'); ?>/img/testimonials.png">
+					<?php
+				}
+				?>
+				
 				<div class="testimonials-text">
 					<?php 
 					if (get_option('info-text-five'))
