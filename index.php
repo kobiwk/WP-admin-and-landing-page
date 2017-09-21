@@ -23,6 +23,13 @@ get_header(); ?>
 	<div class="all-you-need-container">
 		<div class="all-you-need">
 			<p>All you need is here: </p>
+			<?php 
+			if (!$options_for_cat_display)
+			{
+				echo "<p style='font-size: 1rem'>Import your data here! Through admin page make three categories you need and than choose main three of them, with the help 
+				of Organic admin page. </p>";
+			}
+			?>
 		</div>
 		<div class="all-you-need-boxes">
 			<?php 
@@ -53,8 +60,28 @@ get_header(); ?>
 			}
 			else
 			{
-				echo "Import your data here! Through admin page make categories you need and than choose main three of them, with the help 
-				of Organic admin page. ";
+				?>
+				<figure>
+					<div class="box">
+						<span>B</span>
+					</div>
+					<figcaption>BLOG </figcaption>
+				</figure>
+
+				<figure>
+					<div class="box">
+						<span>F</span>
+					</div>
+					<figcaption> FEATURED </figcaption>
+				</figure>
+				<figure>
+					<div class="box">
+						<span>F</span>
+					</div>
+					<figcaption>Fruits </figcaption>
+				</figure>
+
+				<?php
 
 			}
 			
@@ -164,7 +191,7 @@ get_header(); ?>
 				else
 				{
 					?>	
-					<img src="<?php bloginfo('template_directory'); ?>/img/info-image">
+					<img src="<?php bloginfo('template_directory'); ?>/img/info-image.png">
 					<?php
 				}
 			?>
@@ -220,7 +247,7 @@ get_header(); ?>
 				?>
 				<div class="seasonal-fruits-text">
 					<?php
-						if (get_option('organic_section_four_options'))
+						if (''!=(get_option('organic_section_four_options')) )
 						{
 							?>
 							<h2><?php echo get_option('organic_section_four_options')['pu_textbox']; ?></h2>
@@ -257,7 +284,7 @@ get_header(); ?>
 				{
 					?>
 					<img src="<?php echo get_option('section-five-thumbnail-src'); ?>">
-					<?	
+					<?php	
 				}
 				else
 				{

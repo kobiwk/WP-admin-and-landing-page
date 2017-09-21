@@ -93,7 +93,10 @@ function organic_theme_page()
           <div class="tabs-content" data-tabs-content="example-tabs">
               <div class="tabs-panel is-active" id="panel">
               <h2> Basic options </h2>
-              <p> <?php organic_admin_display_basic(); ?>
+              <p> <?php 
+                  // probably delete this option, check later
+                  organic_admin_display_basic(); 
+                  ?>
                   <?php organic_admin_display_header_logo($args); ?>
               </p>
           </div>
@@ -104,15 +107,13 @@ function organic_theme_page()
                  ?>
                 </p>
 
-                <p> Web site desription: 
+                <p> Web site description: 
                   <?php organic_display_header_description($args);?>
                 </p>
                 <p> Text to button: 
                   <?php organic_display_header_button_label($args);?>
                 </p>
-                <p> Button link: 
-                  <?php organic_display_header_button_link($args);?>
-                </p>
+                
                 <p> Background image: 
                   <?php organic_display_header_background($args);?>
                 </p>
@@ -152,9 +153,7 @@ function organic_theme_page()
                 <p> Text to button:
                   <?php organic_display_section_four_button_label($args); ?>
                 </p>
-                <p> Button link:
-                  <?php organic_display_section_four_button_link($args); ?>
-                </p>
+                
                 <p> Background image:
                   <?php organic_display_section_four_background($args); ?>
                 </p>

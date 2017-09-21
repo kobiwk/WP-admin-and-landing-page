@@ -68,17 +68,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'organic-food' ) ); ?>"><?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'organic-food' ), 'WordPress' );
-				?></a>
-				<span class="sep"> | </span>
-				<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'organic-food' ), 'organic-food', '<a href="https://automattic.com/">Underscores.me</a>' );
-				?>
-			</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 	 <?php 
 	$args = 'category_name=featured-posts&posts_per_page=3';

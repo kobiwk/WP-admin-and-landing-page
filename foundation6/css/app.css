@@ -239,6 +239,7 @@ figure {
 	flex-direction: row;
 	align-items: center;
   	justify-content: center;
+  	margin-top: 3rem;
 }
 
 .testimonials img {
@@ -556,7 +557,7 @@ Rest of slider's css code is in slick-theme.css file*/
 .title-best-price {
 	position: absolute;
 	top: 50px;
-	right: 32px;
+	right: 22px;
 	font-size: 26.74px;
 	font-weight: 600;
 	

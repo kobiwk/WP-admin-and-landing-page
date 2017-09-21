@@ -89,7 +89,7 @@ $options_header_logo = get_option('display_header_logo');
 				<?php
 				endif; ?>
 				<button class="hollow button" href="<?php echo $options_header_butt_link['pu_textbox']; ?>">
-					<?php if (isset($options_butt_label['pu_textbox']) )
+					<?php if ($options_butt_label['pu_textbox']) 
 					{
 						echo $options_butt_label['pu_textbox'];
 					}

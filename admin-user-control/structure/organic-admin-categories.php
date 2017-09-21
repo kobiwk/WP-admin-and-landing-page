@@ -5,14 +5,6 @@ add_action('admin_init','register_section_one_settings');
 function register_section_one_settings()
 {
 	register_setting('organic_options','select_wp_category','validate_section_one_settings');	
-
-	//add_settings_section('organic_section_one','Section One', 'display_section_one','organic_options.php');		
-
-
-
-	//add_settings_field('organic_section_one_title', 'Choose category','organic_choose_category','organic_options.php', 'organic_section_one');
-
-
 }
 
 

@@ -3,10 +3,6 @@
 function register_section_six_settings()
 {
 	register_setting('organic_options', 'upload_and_text_six', 'validate_upload_and_text_six');
-
-	//add_settings_section('organic_section_six','Section Six', 'display_section_six', 'organic_options.php');
-
-	//add_settings_field('organic_section_six_upload', 'Upload image: ', 'organic_section_six_upload_image', 'organic_options.php', 'organic_section_six');
 }
 
 add_action('admin_init', 'register_section_six_settings');

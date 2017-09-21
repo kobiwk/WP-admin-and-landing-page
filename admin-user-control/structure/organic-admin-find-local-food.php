@@ -115,23 +115,6 @@ function organic_display_section_four_button_label($args)
     }
 }
 
-function organic_display_section_four_button_link($args) 
-{
-    extract( $args );
-
-      $option_name = 'organic_section_four_button_link';
-
-      $options = get_option( $option_name );
-
-       switch ( $type ) {  
-          case 'text':  
-              $options[$id] = stripslashes($options[$id]);  
-              $options[$id] = esc_attr( $options[$id]);  
-              echo "<input class='regular-text$class' type='text' id='$id' name='" . $option_name . "[$id]' value='$options[$id]' />";  
-              echo ($desc != '') ? "<br /><span class='description'>$desc</span>" : "";  
-          break;  
-    }
-}
 
 
 
